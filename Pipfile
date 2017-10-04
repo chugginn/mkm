@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+Flask = "*"
+"flask-appconfig" = ">=0.10"
+"Flask-Bootstrap" = "*"
+"flask-nav" = "*"
+"flask-debug" = "*"
+"Flask-WTF" = "*"
+gunicorn = "*"
+
+
+[dev-packages]
