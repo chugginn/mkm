@@ -9,10 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    with open('/yt/yt.txt') as f:
-        videos = f.readlines()
-        videos = [x.strip() for x in videos]
-    return render_template('index.html', videos=videos)
+    return render_template('index.html')
 
 
 @app.route('/shows')
