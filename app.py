@@ -27,7 +27,7 @@ def about():
 
 @app.route('/photos')
 def photos():
-    photo_list = [f for f in listdir('/static/img/gallery') if isfile(join('/static/img/gallery', f))]
+    photo_list = [f for f in listdir('static/img/gallery') if isfile(join('static/img/gallery', f))]
     return render_template('photos.html', photo_list=sorted(photo_list, reverse=True))
 
 
@@ -36,4 +36,5 @@ def contact():
     return render_template('contact.html')
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
