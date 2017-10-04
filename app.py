@@ -1,17 +1,39 @@
+from os import listdir
+from os.path import isfile, join
+
 from flask import Flask
-from datetime import datetime
+from flask import render_template
+
 app = Flask(__name__)
 
+
 @app.route('/')
-def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+def index():
+    with open('/yt/yt.txt') as f:
+        videos = f.readlines()
+        videos = [x.strip() for x in videos]
+    return render_template('index.html', videos=videos)
 
-    return """
-    <h1>Hello heroku</h1>
-    <p>It is currently {time}.</p>
 
-    <img src="http://loremflickr.com/600/400">
-    """.format(time=the_time)
+@app.route('/shows')
+def shows():
+    return render_template('shows.html')
 
-if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/photos')
+def photos():
+    photo_list = [f for f in listdir('/static/img/gallery') if isfile(join('/static/img/gallery', f))]
+    return render_template('photos.html', photo_list=sorted(photo_list, reverse=True))
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+app.run(debug=True)
