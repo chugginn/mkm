@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Photos{{ super() }}{% endblock %}
+{% block css_links %}
+    <link rel="stylesheet" href="/static/css/alfred.min.css">
+{% endblock %}
+{% block custom_css %}
+    .hero{
+        background-image: url(/static/img/photos_hero.jpg);
+        background-position: 0% 18%;
+    }
+{% endblock %}
+{% block content %}
+    <section class="tint hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Photos</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="photos">
+        <div class="container" style="display: none;">
+            <!-- Navigation - Tabs -->
+            <div class="dc-tabs-wrap" data-alfred="0">
+                <div class="dc-arrow-left svg-lazy" data-svg="arrows_left"></div>
+                <div class="dc-tabs">
+                    <div class="dc-tabs-slider">
+                        <div class="dc-tab active" data-filter="all">
+                            <span>All</span>
+                        </div>
+                        <span class="dc-slide"></span>
+                    </div>
+                </div>
+                <div class="dc-arrow-right svg-lazy" data-svg="arrows_right"></div>
+            </div>
+
+            <!-- /Navigation - Tabs -->
+        </div>
+
+        <div class="container section-md">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Spinner -->
+                    <div class="dc-layout-spinner" data-alfred="0">
+                        <svg class="spinner-material" viewBox="25 25 50 50">
+                            <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <!-- /Spinner -->
+
+                    <!-- Fallback Message -->
+                    <div class="dc-message" data-alfred="0">
+                        <h4 class="title">No work for <span class="dc-filter"></span></h4>
+                    </div>
+                    <!-- /Fallback Message -->
+
+                    <!-- Layout -->
+                    <div class="dc-layout" data-alfred="0">
+                        {% for photo in photo_list %}
+                        <!-- Layout item -->
+                        <figure class="dc-item dc-gallery-open" data-size="1x1" data-src-lg="{{ photo }}">
+                            <div class="dc-item-wrap">
+                                <img class="dc-img-sm" alt="Portfolio Image" data-src-sm="{{ photo }}">
+                            </div>
+                        </figure>
+                        <!-- /Layout item -->
+                        {% endfor %}
+
+                        <!-- Create more layout items here -->
+
+                    </div>
+                    <!-- /Layout -->
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/alfred.min.js"></script>
+<script>
+   var options = {
+        general: {
+            svgSprite: '/static/img/svg-sprite.svg',
+        },
+        tabs: {
+            slide: {
+                run: false
+            },
+        },
+        layout: {
+            fillContainerWidth: true
+        },
+        item: {
+            pathPrefix: '/static/img/gallery/',
+            hoverEffect: 'effect-lily',
+        },
+        gallery: {
+            templatePath: "/static/js/ajax/gallery-template.html",
+            pathPrefix: '/static/img/gallery/',
+        },
+        loadMore: false,
+        modal: false,
+    };
+
+    var alfred = new Alfred(options);
+
+    alfred.init();
+</script>
+{% endblock %}

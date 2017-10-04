@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}Home{{ super() }}{% endblock %}
+{% block css_links %}
+    <link rel="stylesheet" href="/static/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <!-- Revolution Slider -->
+	<link rel="stylesheet" type="text/css" href="/static/revolution/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css">
+    <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+			(Load Extensions only on Local File Systems !
+			The following part can be removed on Server for On Demand Loading) -->
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="/static/revolution/js/extensions/revolution.extension.video.min.js"></script>
+{% endblock %}
+{% block custom_css %}
+    .hero {
+        background-image: url(/static/img/matt_hero.jpg);
+        background-position: 100% 0;
+    }
+    @media (min-width: 768px) {
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+    }
+{% endblock %}
+{% block content %}
+    <section class="hero tint">
+        <article class="content container">
+
+            <div id="rev_slider_74_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="youtube-gallery70" style="margin:0px auto;background-color:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
+            <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+                <div id="rev_slider_74_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+                    <ul><!-- SLIDE  -->
+                        {% for video_id in videos %}
+                        <li data-index="rs-{{ video_id }}" data-transition="scaledownfrombottom" data-slotamount="7"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="https://i.ytimg.com/vi/{{ video_id }}/default.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Inside Out - Official US Trailer" data-param1="11/12/2014" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="https://i.ytimg.com/vi/{{ video_id }}/default.jpg"  alt=""  data-bgposition="center center" data-bgfit="100% 0%" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                            <!-- LAYER -->
+                            <div class="tp-caption   tp-resizeme tp-videolayer"
+                                 id="slide-{{ video_id }}-layer-2"
+                                 data-x="center" data-hoffset=""
+                                 data-y="center" data-voffset=""
+                                 data-width="['auto']"
+                                 data-height="['auto']"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="opacity:0;s:300;e:Power2.easeInOut;"
+                                 data-transform_out="opacity:0;s:300;s:300;"
+                                 data-start="500"
+                                 data-responsive_offset="on"
+                                 data-ytid="{{ video_id }}" data-videoattributes="rel=0&amp;version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&amp;wmode=opaque&amp;showinfo=0&amp;ref=0;"
+                                 data-videorate="1" data-videowidth="1230px" data-videoheight="692px" data-videocontrols="controls" data-videoloop="none"
+                                 data-autoplay="{% if loop.index0 %}on{% else %}off{% endif %}"
+                                 data-nextslideatend="true"
+                                 data-index="{{ videos.length }}"
+                                 data-volume="100" data-forcerewind="on"
+                                 style="z-index: 5;">
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+            </div><!-- END REVOLUTION SLIDER -->
+            <script type="text/javascript">
+                var tpj=jQuery;
+                var revapi74;
+                tpj(document).ready(function() {
+                    if(tpj("#rev_slider_74_1").revolution == undefined){
+                        revslider_showDoubleJqueryError("#rev_slider_74_1");
+                    }else{
+                        revapi74 = tpj("#rev_slider_74_1").show().revolution({
+                            sliderType:"standard",
+                            jsFileLocation:"/static/revolution/js/",
+                            sliderLayout:"auto",
+                            dottedOverlay:"none",
+                            delay:9000,
+                            navigation: {
+                                keyboardNavigation:"off",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation:"off",
+                                onHoverStop:"off",
+                                arrows: {
+                                    style:"uranus",
+                                    enable:true,
+                                    hide_onmobile:true,
+                                    hide_under:778,
+                                    hide_onleave:true,
+                                    hide_delay:200,
+                                    hide_delay_mobile:1200,
+                                    tmp:'',
+                                    left: {
+                                        h_align:"left",
+                                        v_align:"center",
+                                        h_offset:20,
+                                        v_offset:0
+                                    },
+                                    right: {
+                                        h_align:"right",
+                                        v_align:"center",
+                                        h_offset:20,
+                                        v_offset:0
+                                    }
+                                }
+                                ,
+                                thumbnails: {
+                                    style:"erinyen",
+                                    enable:true,
+                                    width:200,
+                                    height:113,
+                                    min_width:170,
+                                    wrapper_padding:30,
+                                    wrapper_color:"#333333",
+                                    wrapper_opacity:"0.1",
+                                    tmp:'<span class="tp-thumb-over"></span><span class="tp-thumb-image"></span><span class="tp-thumb-title">{{title}}</span><span class="tp-thumb-more"></span>',
+                                    visibleAmount:10,
+                                    hide_onmobile:false,
+                                    hide_onleave:false,
+                                    direction:"horizontal",
+                                    span:true,
+                                    position:"outer-bottom",
+                                    space:20,
+                                    h_align:"center",
+                                    v_align:"bottom",
+                                    h_offset:0,
+                                    v_offset:0
+                                }
+                            },
+                            gridwidth:1230,
+                            gridheight:692,
+                            lazyType:"none",
+                            shadow:0,
+                            spinner:"spinner2",
+                            stopLoop:"on",
+                            stopAfterLoops:0,
+                            stopAtSlide:1,
+                            shuffle:"off",
+                            autoHeight:"off",
+                            disableProgressBar:"on",
+                            hideThumbsOnMobile:"off",
+                            hideSliderAtLimit:0,
+                            hideCaptionAtLimit:0,
+                            hideAllCaptionAtLilmit:0,
+                            debugMode:false,
+                            fallbacks: {
+                                simplifyAll:"off",
+                                nextSlideOnWindowFocus:"off",
+                                disableFocusListener:false,
+                            }
+                        });
+                    }
+                });	/*ready*/
+            </script>
+        </article>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

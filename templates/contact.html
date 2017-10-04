@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{{ super() }}{% endblock %}
+{% block custom_css %}
+    .hero{
+        background-image: url(/static/img/contact_hero.jpg);
+        background-position: 0% 90%;
+    }
+{% endblock %}
+{% block content %}
+    <section class="tint hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Contact Me</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="shows" class="flex" style="height: calc(100vh - 357px);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="h1"><a class="white" href="mailto:mvkitchen@gmail.com">mvkitchen@gmail.com</a></h2>
+                    <h2 class="h2"><a class="white" href="tel:12106461858">(210) 646-1858</a></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

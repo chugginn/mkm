@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}About{{ super() }}{% endblock %}
+{% block custom_css %}
+    .hero{
+        background-image: url(/static/img/about_hero.jpg);
+        background-position: 0% 18%;
+    }
+{% endblock %}
+{% block content %}
+    <section class="tint hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About Matt</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="shows">
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-7">
+                    <p>Matthew Val Kitchen was born in Baton Rouge, Louisiana where his love of the Cajun culture, cuisine, and the New Orleans Saints began. He soon found his way to San Antonio, Texas where he has lived since the age of six.</p>
+                    <p>Music has always been a part of Matt’s life. Growing up, his parents were involved in the church and his dad played the guitar around the home. Matt received his own first guitar, a Takamine, from his grandfather when he fifteen years old. Since then, Matt has been playing and writing music, while growing his lyrics as he matures through his own life. Matt’s soul is in music and he is a fan of a variety of genres which he incorporates into his own music.</p>
+                    <p>He is inspired by one of his favorite bands, Counting Crows. He also enjoys Dream Theater very much, but knows he will never play any instrument like they can. He has a nostalgic love of music from the 1990’s, including both alternative and country. He enjoys attending live concerts of his favorite artists, playing his guitar anywhere he can, and going to historic Gruene, Texas to indulge in the talents found there. &nbsp;He has his wife to thank for his new-found love of Texas Country. &nbsp;He was not exposed to it until he met her, and now he enjoys and is inspired by artists like Sean McConnell, Randy Rogers, Kevin Fowler, Cory Morrow, and many more!</p>
+                    <p>Matt started with small San Antonio bands including Tribulation in 2003 and Finding Forever in 2004. Since then, he has played is own shows around town and is looking to explore more of Texas with his music. He enjoys performing cover songs as well as his own works and would love to share his passion for music and his sense of humor with you! &nbsp;If you would like him to play at your venue or event, he can tailor his set to the crowd that will be there. &nbsp;You can count on him to entertain!</p>
+                    <p>Matt is a proud Texas State Bobcat (Eat ’em up!) and met his wife while going to school in the always wonderful San Marcos, TX. &nbsp;He won her over with music and hopes to keep doing that for years to come. &nbsp;They have been married since 2009, and she still likes him (at least a little bit). &nbsp;So far so good!</p>
+                    <p>Again, welcome to the page and Matt hopes to see you at a show soon!</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="/static/img/bug.jpg" class="on-top" />
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
