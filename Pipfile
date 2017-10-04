@@ -5,13 +5,15 @@ name = "pypi"
 
 [packages]
 
-Flask = "*"
+flask = "*"
 "flask-appconfig" = ">=0.10"
-"Flask-Bootstrap" = "*"
+"flask-bootstrap" = "*"
 "flask-nav" = "*"
 "flask-debug" = "*"
-"Flask-WTF" = "*"
+"flask-wtf" = "*"
 gunicorn = "*"
+requests = "*"
 
 
-[dev-packages]
+[requires]
+python_version = "3.6"
