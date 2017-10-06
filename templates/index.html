@@ -14,6 +14,7 @@
     <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="/static/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="/static/js/instafeed.min.js"></script>
     <script type="text/javascript" src="/static/js/fancybox.min.js"></script>
 {% endblock %}
@@ -48,7 +49,8 @@
             feed.run();
             $(document).ready(function () {
                 setTimeout(function() {
-                    $(".owl-carousel").owlCarousel({
+                    var owl = $('.owl-carousel');
+                    owl.owlCarousel({
                         dots: false,
                         loop: true,
                         margin: 10,
@@ -68,6 +70,14 @@
                                 items: 6
                             }
                         }
+                    });
+                    owl.on('mousewheel', '.owl-stage', function (e) {
+                        if (e.deltaY>0) {
+                            owl.trigger('prev.owl');
+                        } else {
+                            owl.trigger('next.owl');
+                        }
+                        e.preventDefault();
                     });
                 }, 1000);
             });
