@@ -1,9 +1,11 @@
 $(document).ready(function() {
 	$(window).scroll(function(){
-		if ( $(this).scrollTop() > 0) {
+		if ( $(this).scrollTop() > 40) {
 			$('.navbar').addClass("navbar-scrolled");
+			$('.top-social').addClass("social-scrolled");
 		} else {
 			$('.navbar').removeClass("navbar-scrolled");
+			$('.top-social').removeClass("social-scrolled");
 		}
 	});
     $(".player .toggle").click(function() {
