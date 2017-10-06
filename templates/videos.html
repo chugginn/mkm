@@ -2,21 +2,12 @@
 
 {% block title %}Home{{ super() }}{% endblock %}
 {% block css_links %}
-    <link rel="stylesheet" href="/static/css/owl.carousel.css">
-    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
     <!-- Revolution Slider -->
 	<link rel="stylesheet" type="text/css" href="/static/revolution/fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css">
     <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/fancybox.min.css">
     <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="/static/js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="/static/js/instafeed.min.js"></script>
-    <script type="text/javascript" src="/static/js/fancybox.min.js"></script>
 {% endblock %}
 {% block custom_css %}
     .hero {
@@ -36,11 +27,12 @@
 {% block content %}
     <section class="hero tint">
         <article class="content container">
-            <div id="rev_slider_74_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="youtube-gallery70" style="margin:0px auto;background-color:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
+            <div id="rev_slider_74_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="youtube-gallery70" style="margin: 0 auto;
+            background-color:#000000;padding:0;">
             <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
                 <div id="rev_slider_74_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
                     <ul><!-- SLIDE  -->
-                        {% for video_id in videos %}
+                        {% for video_id in videos1 %}
                         <li data-index="rs-{{ video_id }}" data-transition="scaledownfrombottom" data-slotamount="7"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="https://i.ytimg.com/vi/{{ video_id }}/default.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Inside Out - Official US Trailer" data-param1="11/12/2014" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="https://i.ytimg.com/vi/{{ video_id }}/default.jpg"  alt=""  data-bgposition="center center" data-bgfit="100% 0%" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
@@ -61,7 +53,7 @@
                                  data-videorate="1" data-videowidth="1230px" data-videoheight="692px" data-videocontrols="controls" data-videoloop="none"
                                  data-autoplay="{% if loop.index0 %}on{% else %}on{% endif %}"
                                  data-nextslideatend="true"
-                                 data-index="{{ videos.length }}"
+                                 data-index="{{ videos1.length }}"
                                  data-volume="100" data-forcerewind="on"
                                  style="z-index: 5;">
                             </div>
@@ -75,10 +67,7 @@
                 var tpj=jQuery;
                 var revapi74;
                 tpj(document).ready(function() {
-                    if(tpj("#rev_slider_74_1").revolution == undefined){
-                        revslider_showDoubleJqueryError("#rev_slider_74_1");
-                    }else{
-                        revapi74 = tpj("#rev_slider_74_1").show().revolution({
+                    revapi74 = tpj("#rev_slider_74_1").show().revolution({
                             sliderType:"standard",
                             jsFileLocation:"/static/revolution/js/",
                             sliderLayout:"auto",
@@ -154,11 +143,10 @@
                             fallbacks: {
                                 simplifyAll:"off",
                                 nextSlideOnWindowFocus:"off",
-                                disableFocusListener:false,
+                                disableFocusListener:false
                             }
                         });
-                    }
-                });	/*ready*/
+                    });
             </script>
         </article>
     </section>
