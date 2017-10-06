@@ -16,9 +16,9 @@ def index():
 @app.route('/videos')
 def videos():
     with open('yt/yt.txt') as f:
-        videos1 = f.readlines()
-        videos1 = [x.strip() for x in videos1]
-    return render_template('videos.html', videos1=videos1)
+        videos = f.readlines()
+        videos = [x.strip() for x in videos]
+    return render_template('videos.html', videos=videos)
 
 
 @app.route('/shows')
