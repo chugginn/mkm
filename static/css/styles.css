@@ -165,7 +165,7 @@ section#newsletter {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 2em;
+    font-size: 1.9em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -331,5 +331,8 @@ div#mc_embed_signup input[type=submit] {
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.98) 92%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.98) 92%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    }
+    .hero {
+        padding: 140px 0 50px;
     }
 }
