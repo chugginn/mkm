@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 from os import listdir
 from os.path import isfile, join
 from flask import Flask
