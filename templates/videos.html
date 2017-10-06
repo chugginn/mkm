@@ -46,7 +46,7 @@
                             <img src="https://i.ytimg.com/vi/{{ video_id }}/default.jpg"  alt=""  data-bgposition="center center" data-bgfit="100% 0%" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
                             <!-- LAYER -->
-                            <div class="tp-caption   tp-resizeme tp-videolayer"
+                            <div class="tp-caption tp-resizeme tp-videolayer"
                                  id="slide-{{ video_id }}-layer-2"
                                  data-x="center" data-hoffset=""
                                  data-y="center" data-voffset=""
@@ -59,7 +59,7 @@
                                  data-responsive_offset="on"
                                  data-ytid="{{ video_id }}" data-videoattributes="rel=0&amp;version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&amp;wmode=opaque&amp;showinfo=0&amp;ref=0;"
                                  data-videorate="1" data-videowidth="1230px" data-videoheight="692px" data-videocontrols="controls" data-videoloop="none"
-                                 data-autoplay="{% if loop.index0 %}on{% else %}off{% endif %}"
+                                 data-autoplay="{% if loop.index0 %}on{% else %}on{% endif %}"
                                  data-nextslideatend="true"
                                  data-index="{{ videos.length }}"
                                  data-volume="100" data-forcerewind="on"
@@ -121,7 +121,7 @@
                                     wrapper_padding:30,
                                     wrapper_color:"#333333",
                                     wrapper_opacity:"0.1",
-                                    tmp:'<span class="tp-thumb-over"></span><span class="tp-thumb-image"></span><span class="tp-thumb-title">{{title}}</span><span class="tp-thumb-more"></span>',
+                                    tmp:'<span class="tp-thumb-over"></span><span class="tp-thumb-image"></span><span class="tp-thumb-title">{{ title }}</span><span class="tp-thumb-more"></span>',
                                     visibleAmount:10,
                                     hide_onmobile:false,
                                     hide_onleave:false,
