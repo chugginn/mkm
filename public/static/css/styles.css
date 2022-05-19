@@ -1,0 +1,417 @@
+.wf-loading * {
+font-family: "Trebuchet MS";
+visibility: hidden;
+}
+.wf-active * {
+visibility: visible;
+}
+body {
+    background: #080808;
+    background-size: cover;
+    padding-top: 5rem;
+    font-family: "acumin-pro", sans-serif;
+    padding-bottom: 80px;
+    color: #d2d2d2;
+    font-size: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "rift", sans-serif;
+}
+h1, .h1 {
+    font-size: 4em;
+}
+p, input {
+    font-size: 1.5em;
+}
+iframe {
+    border: 0;
+}
+.content img {
+    max-width: 100%;
+}
+.on-top {
+    position: relative;
+    z-index: 1020;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.43);
+}
+.white {color: white}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section, footer {
+    position: relative;
+    padding: 45px 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+section#newsletter {
+    padding: 25px 0;
+}
+.fancybox-caption-wrap {
+    text-align: center;
+}
+
+.fancybox-caption {
+    font-size: 3.5em;
+    line-height: 1.3;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.owl-item > div {
+    width: 250px;
+    height: 250px;
+}
+.owl-item > div a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+.content {
+    position: relative;
+}
+.owl-theme .owl-nav [class*=owl-] {
+    font-family: 'rift';
+    border-radius: 0;
+    width: 10%;
+    display: inline-block;
+    min-width: 150px;
+    background: #ffdc9a;
+    color: black;
+}
+.navbar-nav {
+    font-family: "rift", sans-serif;
+}
+.navbar-brand img {max-height: 45px !important;}
+
+.navbar-dark .navbar-toggler {
+    border: 0;
+}
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-brand {
+    margin-right: 3rem;
+}
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    transition: height 0.3s ease;
+    z-index: 1050;
+}
+.player .toggle {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #4e4e4e;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 20px;
+}
+.player.auto_height {
+    height: auto;
+}
+
+.angle {
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f84bc+0,81d5db+100 */
+    background: #2f84bc; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #2f84bc 0%, #81d5db 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #2f84bc 0%,#81d5db 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #2f84bc 0%,#81d5db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f84bc', endColorstr='#81d5db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding: 200px 0 65px;
+    margin-top: -80px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.hero h1 {
+    font-weight: 900;
+    color: white;
+}
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all .3s linear;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.9em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.navbar {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+    top: 40px;
+}
+
+.navbar.navbar-scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+}
+.overlay {
+    opacity: 0;
+    background-color:#000;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    transition: opacity 0.3s;
+}
+
+.overlay.engaged {
+    opacity: 0.7;
+    z-index: 1031;
+}
+
+iframe#home_video {
+    z-index: 0;
+}
+
+iframe#home_video.playing {
+    z-index: 1040;
+}
+.embed-responsive-21by9::before {
+    padding-top: 42.3%;
+}
+/* Newsletter Signup */
+
+section#newsletter h2 {
+    color: black;
+}
+
+div#mc_embed_signup label {display: none;}
+
+div#mc_embed_signup input {
+    width: 100%;
+    border: 0;
+    padding: 2px 15px 0;
+    height: 3em;
+    color: black;
+    margin: 0 0 1em;
+}
+div#mc_embed_signup input[type=submit] {
+    background: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+.h2, h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0 0 1.5em;
+    font-size: 400%;
+}
+
+.dc-gallery-template {
+    z-index: 1030;
+}
+.top-social {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    height: auto;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.top-social.social-scrolled {
+    top: -40px;
+}
+.top-icons ul {
+    margin: 0 1em;
+    padding: 0;
+    list-style: none;
+    width: auto;
+    display: inline-block;
+}
+
+.top-icons li {
+    display: inline-block;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+
+.top-icons li a {
+    font-size: 2em;
+    color: white;
+    opacity: 0.8;
+}
+
+.top-icons li a:hover {
+    opacity: 1;
+}
+
+.top-icons ul:before {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.6em;
+    font-family: "rift";
+    color: white;
+    margin-right: 0.4em;
+}
+
+.top-icons ul.social:before {
+    content: "Talk to Me:";
+}
+
+.top-icons ul.social:after {
+    /* content: ""; */
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.33);
+    margin: 1em auto;
+}
+
+.top-icons ul.buy:before {
+    content: "Buy Me:";
+}
+
+.top-icons .buy li a {text-indent: -999em;display: block;width: 72px;background-size: auto 35px;height: 40px;background-position: -34px 50%;}
+
+.top-icons .buy li a.itunes {
+    background-image: url(../img/itunes.png);
+}
+
+.top-icons .buy li a.amazon {
+    background-image: url(../img/amazon.png);
+    width: 68px;
+}
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+}
+
+.form .field {
+    margin: 0 0 10px;
+}
+
+.form button#submit {
+    background: black;
+    color: white;
+    font-size: 2em;
+    font-family: rift;
+    border: 1px solid white;
+    padding: 5px 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form.register,
+form.login {
+    width: 350px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.form button#submit:hover {
+    background: white;
+    color: black;
+}
+
+.notification.error {
+    background: #ca0000;
+    color: white;
+    font-size: 11px;
+}
+
+.top-icons ul.account li a {
+    font-family: rift, sans-serif;
+}
+
+.top-icons ul.account {
+    float: right;
+}
+@media (min-width: 1200px) {
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 3.2em;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 1rem;
+    }
+    .player {
+        display: none;
+    }
+    .navbar, .navbar.navbar-scrolled {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+92,000000+100&0.7+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.98) 92%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.98) 92%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.98) 92%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    }
+    .hero {
+        padding: 140px 0 50px;
+    }
+    .top-icons ul.buy:before {
+        display: none;
+    }
+
+    .top-icons ul:before {
+        display: none;
+    }
+
+    .top-icons ul {
+        margin: 0;
+    }
+
+    .top-icons .buy li a.amazon {
+        width: 51px;
+    }
+
+    .top-icons .buy li a {
+        height: 30px;
+        width: 54px;
+        background-size: auto 27px;
+        background-position: -26px 50%;
+    }
+
+    .top-icons li {
+        margin: 0 5px;
+    }
+
+    .top-social {
+        background: rgb(53, 53, 53);
+        padding: 4px 0 0;
+    }
+    section#newsletter h2 {
+        margin-bottom: 20px;;
+    }
+}
